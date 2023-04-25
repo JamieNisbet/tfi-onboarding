@@ -1,11 +1,19 @@
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import "./App.css";
+import Header from "./templates/Header";
+import Form from "./pages/Form";
 
 
 function App() {
   return (
-    <div className="flex justify-center mt-52 text-5xl underline">
-      This React App has been installed with Tailwind CSS
-    </div>
+    <>
+    <BrowserRouter>
+        <Header />
+    <Routes>
+      <Route path="/" element={<Form />} />
+    </Routes>
+  </BrowserRouter>
+    </>
   );
 }
 
